@@ -3,7 +3,7 @@
 
     const addNewTask = (newTask) => {
         tasks.push({
-            content: newTask,
+            content: newTask.value.trim(),
             done: false,
         });
 
@@ -38,9 +38,15 @@
         for (const task of tasks) {
             HTMLString += `
             <li class="list__item">
-                <button class="js-toggleDoneButton list__button--done">✔</button>
-                <div class="list__content ${task.done ? "list__content--done" : ""}">${task.content}</div>
-                <button class="js-removeButton list__button--remove">🗑</button>
+                <button class="js-toggleDoneButton list__button--done">
+                    ${task.done ? "✔" : ""}
+                </button>
+                <div class="list__content ${task.done ? "list__content--done" : ""}">
+                    ${task.content}
+                </div>
+                <button class="js-removeButton list__button--remove">
+                    🗑
+                </button>
             </li>
             `;
         }
@@ -54,14 +60,17 @@
     const onFormSubmit = (event) => {
         event.preventDefault();
 
-        const newTask = document.querySelector(".js-newTask").value.trim();
+        const newTask = document.querySelector(".js-newTask");
 
-        if (newTask === "") {
+        if (newTask.value.trim() === "") {
             return
         };
 
         addNewTask(newTask);
-    }
+
+        newTask.focus();
+        newTask.value = "";
+    };
 
     const init = () => {
         render();
