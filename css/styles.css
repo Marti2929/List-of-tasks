@@ -100,6 +100,7 @@
 .list__button--done {
     border: none;
     background-color: green;
+    color:rgb(255, 255, 255);
     width: 25px;
     height: 25px;
     align-self: center;
@@ -108,9 +109,11 @@
 .list__button--remove {
     border: none;
     background-color: red;
+    color:rgb(255, 255, 255);
     width: 25px;
     height: 25px;
     align-self: center;
+    background-image: "🎨";
 }
 
 .list__content {

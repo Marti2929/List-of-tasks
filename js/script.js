@@ -38,9 +38,9 @@
         for (const task of tasks) {
             HTMLString += `
             <li class="list__item">
-                <button class="js-toggleDoneButton list__button--done"></button>
+                <button class="js-toggleDoneButton list__button--done">✔</button>
                 <div class="list__content ${task.done ? "list__content--done" : ""}">${task.content}</div>
-                <button class="js-removeButton list__button--remove"></button>
+                <button class="js-removeButton list__button--remove">🗑</button>
             </li>
             `;
         }
