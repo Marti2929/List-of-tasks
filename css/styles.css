@@ -120,5 +120,5 @@
 
 .list__content {
     align-self: center;
-    word-break: normal  ;
+    word-break: break-word;
 }
