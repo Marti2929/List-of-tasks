@@ -104,6 +104,7 @@
     width: 25px;
     height: 25px;
     align-self: center;
+    cursor: pointer;
 }
 
 .list__button--remove {
@@ -114,8 +115,10 @@
     height: 25px;
     align-self: center;
     background-image: "🎨";
+    cursor: pointer;
 }
 
 .list__content {
     align-self: center;
+    word-break: normal  ;
 }
