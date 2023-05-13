@@ -1,0 +1,64 @@
+.list {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    max-width: 737px;
+    margin: 2px auto 10px auto;
+}
+
+    @media (max-width: 767px) {
+        .list {
+            margin: 2px 20px 10px 20px;
+        }
+    }
+
+.list__item {
+    border-bottom: #eee solid 2px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 30fr 1fr;
+    grid-gap: 5px 10px;
+}
+
+.list__button--done {
+    border: none;
+    background-color: hsl(120, 100%, 25%);
+    color:rgb(255, 255, 255);
+    width: 25px;
+    height: 25px;
+    align-self: center;
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+
+.list__button--done:hover {
+    background-color: hsl(120, 100%, 35%);
+}
+
+.list__button--remove {
+    border: none;
+    background-color: hsl(0, 100%, 40%);
+    color:rgb(255, 255, 255);
+    width: 25px;
+    height: 25px;
+    align-self: center;
+    background-image: "🎨";
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+
+.list__button--remove:hover {
+    background-color: hsl(0, 100%, 60%);
+}
+
+.list__content {
+    align-self: center;
+    word-break: break-word;
+}
+
+.list__content--done {
+    text-decoration: line-through;
+}
+
+.list__item--hidden {
+    display: none;
+}

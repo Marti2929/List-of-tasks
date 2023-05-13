@@ -1,0 +1,58 @@
+.title {
+    font-size: 20px;
+    min-width: 250px;
+}
+
+.title__background {
+    max-width: 737px;
+    margin: 10px auto 2px auto;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+    @media (max-width: 767px) {
+        .title__background {
+            margin: 10px 20px 2px 20px;
+        }
+    }
+
+    @media (max-width: 645px) {
+        .title__backgroundList {
+            grid-template-columns: 1fr;
+        }
+    }
+
+.title__bothButtons {
+    align-self: center;
+    justify-self: right;
+}
+
+    @media (max-width: 645px) {
+        .title__bothButtons {
+            justify-self: center;
+        }
+    }
+
+.title__button {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: hsl(0, 0%, 35%);
+    font-size: 16px;
+    max-height: 32px;
+}
+
+.title__button:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.title__button--disabled {
+    color: #aaa;
+}
+
+.title__button--disabled:hover {
+    color: #aaa;
+    cursor: auto;
+}
